@@ -92,7 +92,7 @@ public class MyBatisTest {
     public void deleteMemberRoleTest(){
         SqlSession session = MyBatisUtils.getSqlSession();
         IMembersMapper mapper = session.getMapper(IMembersMapper.class);
-        int result_role=mapper.deleteMemberRoles(3);
+        int result_role=mapper.deleteMemberRoles(1);
         if (result_role>0){
             System.out.println("成功删除"+result_role+"条数据");
         }else {
