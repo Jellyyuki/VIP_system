@@ -47,8 +47,8 @@ public class MyBatisTest {
     public void insertMemberTest(){
         SqlSession session=MyBatisUtils.getSqlSession();
         Member member= new Member();
-        member.setmID(6);
-        member.setUsername("李白");
+        member.setmID(5);
+        member.setUsername("赵五");
         member.setActive(true);
         DateTimeFormatter formatter = DateTimeFormatter.ofPattern("yyyy-MM-dd HH:mm:ss");
         member.setJoinDate(LocalDateTime.parse("2026-03-28 00:00:00", formatter));
@@ -92,7 +92,7 @@ public class MyBatisTest {
     public void deleteMemberRoleTest(){
         SqlSession session = MyBatisUtils.getSqlSession();
         IMembersMapper mapper = session.getMapper(IMembersMapper.class);
-        int result_role=mapper.deleteMemberRoles(1);
+        int result_role=mapper.deleteMemberRoles(2);
         if (result_role>0){
             System.out.println("成功删除"+result_role+"条数据");
         }else {
