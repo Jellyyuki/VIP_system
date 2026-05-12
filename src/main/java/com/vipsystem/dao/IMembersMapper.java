@@ -1,8 +1,8 @@
 package com.vipsystem.dao;
 
-import com.vipsystem.pojo.Member;        // ✅ 改为你的 pojo 包路径
-import com.vipsystem.pojo.MemberLevels;  // ✅ 改为你的 pojo 包路径
-import com.vipsystem.pojo.MemberRoles;   // ✅ 改为你的 pojo 包路径
+import com.vipsystem.pojo.Member;
+import com.vipsystem.pojo.MemberLevels;
+import com.vipsystem.pojo.MemberRoles;
 import org.apache.ibatis.annotations.*;
 
 public interface IMembersMapper {
