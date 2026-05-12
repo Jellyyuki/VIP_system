@@ -1,27 +1,32 @@
 package com.vipsystem.pojo;
 
 public class MemberLevels {
-    private int lID; // 对应 L_ID
-    private String lName; // 对应 L_Name
-    private String description; // 对应 Description
+    private int lID;
+    private String lName;
+    private String description;
 
-    // 构造方法
+    // 无参构造
     public MemberLevels() {
     }
 
-    public MemberLevels(Integer lID, String lName, String description) {
+    // 全参构造
+    public MemberLevels(int lID, String lName, String description) {
         this.lID = lID;
         this.lName = lName;
         this.description = description;
     }
 
-    // Getters 和 Setters
+    // GETTER / SETTER
     public int getlID() {
-        return this.lID= lID;
+        return lID;
     }
 
-    public void setlID(Integer lID) {
-        this.lID=lID;
+    public void setlID(int lID) {
+        this.lID = lID;
+    }
+
+    public String getlName() {
+        return lName;
     }
 
     public void setlName(String lName) {
@@ -36,7 +41,7 @@ public class MemberLevels {
         this.description = description;
     }
 
-    // toString 方法，方便打印信息
+    // toString
     @Override
     public String toString() {
         return "MemberLevels{" +
@@ -44,8 +49,5 @@ public class MemberLevels {
                 ", lName='" + lName + '\'' +
                 ", description='" + description + '\'' +
                 '}';
-    }
-    public String getlName(int i) {
-        return lName;
     }
 }

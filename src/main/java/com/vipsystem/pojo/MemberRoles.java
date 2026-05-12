@@ -1,27 +1,29 @@
 package com.vipsystem.pojo;
 
 public class MemberRoles {
-    private int rID; // 对应 R_ID
-    private String authority; // 对应 Authority
-    private String description; // 对应 Description
+    // 成员变量
+    private int rID;
+    private String authority;
+    private String description;
 
-    // 构造方法
+    // 无参构造
     public MemberRoles() {
     }
 
-    public MemberRoles(Integer rID, String authority, String description) {
+    // 全参构造
+    public MemberRoles(int rID, String authority, String description) {
         this.rID = rID;
         this.authority = authority;
         this.description = description;
     }
 
-    // Getters 和 Setters
+    // Getter & Setter
     public int getrID() {
         return rID;
     }
 
-    public void setrID(Integer rID) {
-        this.rID= rID;
+    public void setrID(int rID) {
+        this.rID = rID;
     }
 
     public String getAuthority() {
@@ -29,7 +31,7 @@ public class MemberRoles {
     }
 
     public void setAuthority(String authority) {
-        this.authority= authority;
+        this.authority = authority;
     }
 
     public String getDescription() {
@@ -37,10 +39,10 @@ public class MemberRoles {
     }
 
     public void setDescription(String description) {
-        this.description=  description;
+        this.description = description;
     }
 
-    // toString 方法，方便打印信息
+    // toString
     @Override
     public String toString() {
         return "MemberRoles{" +
