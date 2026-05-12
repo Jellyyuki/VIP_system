@@ -1,4 +1,4 @@
-package com.vipsystem.dao;   // ✅ 改为你的项目包名
+package com.vipsystem.dao;
 
 import com.vipsystem.pojo.Member;        // ✅ 改为你的 pojo 包路径
 import com.vipsystem.pojo.MemberLevels;  // ✅ 改为你的 pojo 包路径
@@ -17,14 +17,14 @@ public interface IMembersMapper {
     @Results({
             @Result(column = "R_ID", property = "rID")
     })
-    MemberRoles selectMemberRoles(int id1);
+    MemberRoles SelectMemberRoles(int id1);
 
     @Select("select * from memberlevels where memberlevels.L_ID = #{id2}")
     @Results({
             @Result(column = "L_ID", property = "lID"),
             @Result(column = "L_Name", property = "lName")
     })
-    MemberLevels selectMemberLevel(int id2);
+    MemberLevels SelectMemberLevel(int id2);
 
     @Insert("insert into members(M_ID, Username, JoinDate, LastLogin, IsActive) " +
             "values(#{mID}, #{username}, #{joinDate}, #{lastLogin}, #{isActive})")
